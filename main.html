@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="directions.html">Directions</a></li>
+        <li><a href="directions_history.html">Direction History</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8"> 
+        <h1>Project Information: </h1>
+          <h3>Name: William Ball</h3>
+          <h3>Class: CSE 383 A</h3>
+          <h3>Assignment: CSE 383 Final Project (Tom Tom API Directions)</h3>
+        <hr>
+        <h1>Project Description:</h1>
+        <p>
+              For this project we are to make a multi-page/multi-tab web client using Html, JavaScript, bootstrap and CSS. 
+              The web pages are supposed to look good and be responsive, meaning that they collapse down into one column when shrunk down.
+              This project is to use the "TomTom api" to pull directions to a certain location from a certain location with filters that are selectable
+              for the type of route that the person would like.
+              For each directions requests that is sent the system should store the returned JSON object in the database that we are using for this assignment (SQLite)
+        </p>
+      </div>
+        <div class="col-sm-4">
+          <img src="directions.jpg" alt="A picture of a thumbtacs on a map" class="img-thumbnail">
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>

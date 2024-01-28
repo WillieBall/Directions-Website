@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Directions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="project.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="main.html">Home</a></li>
+        <li class="active"><a href="directions.html">Directions</a></li>
+        <li><a href="directions_history.html">Direction History</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <label for="startingAddress" class="form-label">Starting Address</label>
+      <input type="text" class="form-control" aria-label="Starting Address" id="startingAddress" name="startingAddress">
+    </div>
+    <div class="col-sm-6">
+      <label for="endingAddress" class="form-label">Ending Address</label>
+      <input type="text" class="form-control" aria-label="Ending Address" id="endingAddress" name="endingAddress">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+        <label for="routeType" class="form-label">Route Type</label>
+        <select id="routeType" class="form-select" name="routeType">
+          <option selected="true" disabled="disabled">Type</option>
+          <option value="fastest">Fasted</option>
+          <option value="shortest">Shortest</option>
+          <option value="eco">Eco</option>
+          <option value="thrilling">Thrilling</option>
+        </select>
+    </div>
+    <div class="col-sm-4">
+      <label for="travelMode" class="form-label">Mode of Travel</label>
+      <select id="travelMode" class="form-select" name="travelMode">
+        <option selected="true" disabled="disabled">Mode</option>
+        <option value="car">Car</option>
+        <option value="truck">Truck</option>
+        <option value="taxi">Taxi</option>
+        <option value="bus">Bus</option>
+        <option value="van">Van</option>
+        <option value="motorcycle">Motorcycle</option>
+        <option value="bicycle">Bicycle</option>
+        <option value="pedestrian">Pedestrian</option>
+      </select>
+    </div>
+    <div class="col-sm-4">
+      <label for="hilliness" class="form-label">Amount of Hills</label>
+      <select id="hilliness" class="form-select" name="hilliness">
+        <option selected="true" disabled="disabled">Amount</option>
+        <option value="low">Low</option>
+        <option value="normal">Normal</option>
+        <option value="high">high</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <button type="button" class="btn btn-primary btn-lg" id="directionsSubmit" name="directionsSubmit" value="Submit" onclick="setVariables()">Get Directions</button>
+      <p>(Refresh the page before getting new directions)</p>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+  
+
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <label for="travelInfo" class="form-label"><h2>Travel Info</h2></label>
+      <div id="travelInfo"></div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <label class="form-label"><h2>Directions</h2></label>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Directions</th>
+            <th scope="col">Distance (meters)</th>
+            <th scope="col">Time (seconds)</th>
+            <th scope="col">Img</th>
+          </tr>
+        </thead>
+        <tbody id="directionInfo">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
